@@ -1,0 +1,389 @@
+{
+  "geocoded_waypoints": [
+    {
+      "geocoder_status": "OK",
+      "place_id": "ChIJcxbgjAp644kRFU8-argqr1c",
+      "types": [
+        "premise"
+      ]
+    },
+    {
+      "geocoder_status": "OK",
+      "partial_match": true,
+      "place_id": "ChIJ4VzPmRl644kRjLkiZeYAe8k",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "university"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "bounds": {
+        "northeast": {
+          "lat": 42.3543827,
+          "lng": -71.0760406
+        },
+        "southwest": {
+          "lat": 42.3378282,
+          "lng": -71.09523999999999
+        }
+      },
+      "copyrights": "Map data ©2023 Google",
+      "fare": {
+        "currency": "USD",
+        "text": "$2.40",
+        "value": 2.4
+      },
+      "legs": [
+        {
+          "arrival_time": {
+            "text": "3:52 PM",
+            "time_zone": "America/New_York",
+            "value": 1703969535
+          },
+          "departure_time": {
+            "text": "3:30 PM",
+            "time_zone": "America/New_York",
+            "value": 1703968200
+          },
+          "distance": {
+            "text": "1.9 mi",
+            "value": 3038
+          },
+          "duration": {
+            "text": "22 mins",
+            "value": 1335
+          },
+          "end_address": "360 Huntington Ave, Boston, MA 02115, USA",
+          "end_location": {
+            "lat": 42.3388772,
+            "lng": -71.0922341
+          },
+          "start_address": "181 Beacon St, Boston, MA 02116, USA",
+          "start_location": {
+            "lat": 42.3543827,
+            "lng": -71.0760406
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "0.4 mi",
+                "value": 680
+              },
+              "duration": {
+                "text": "11 mins",
+                "value": 652
+              },
+              "end_location": {
+                "lat": 42.350126,
+                "lng": -71.077376
+              },
+              "html_instructions": "Walk to Copley",
+              "polyline": {
+                "points": "{ioaGf`ypL@HD\\\\tB@A@DF^hBhKz@]DIp@YHCAABAVI@@z@_@FAbAa@ACBARC?ANEVEJEACVKbAa@DCz@]?@XM|@]DCPGPGDA@Fb@?"
+              },
+              "start_location": {
+                "lat": 42.3543827,
+                "lng": -71.0760406
+              },
+              "steps": [
+                {
+                  "distance": {
+                    "text": "0.2 mi",
+                    "value": 263
+                  },
+                  "duration": {
+                    "text": "4 mins",
+                    "value": 220
+                  },
+                  "end_location": {
+                    "lat": 42.3535966,
+                    "lng": -71.0789757
+                  },
+                  "html_instructions": "Head <b>west</b> on <b>Beacon St</b> toward <b>Clarendon St</b>",
+                  "polyline": {
+                    "points": "{ioaGf`ypL@HD\\\\tB@A@DF^hBhK"
+                  },
+                  "start_location": {
+                    "lat": 42.3543827,
+                    "lng": -71.0760406
+                  },
+                  "travel_mode": "WALKING"
+                },
+                {
+                  "distance": {
+                    "text": "0.2 mi",
+                    "value": 397
+                  },
+                  "duration": {
+                    "text": "6 mins",
+                    "value": 350
+                  },
+                  "end_location": {
+                    "lat": 42.3503226,
+                    "lng": -71.0773401
+                  },
+                  "html_instructions": "Turn <b>left</b> onto <b>Dartmouth St</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                  "maneuver": "turn-left",
+                  "polyline": {
+                    "points": "_eoaGrrypLz@]DIp@YHCAABAVI@@z@_@FAbAa@ACBARC?ANEVEJEACVKbAa@DCz@]?@XM|@]DCPGPGDA"
+                  },
+                  "start_location": {
+                    "lat": 42.3535966,
+                    "lng": -71.0789757
+                  },
+                  "travel_mode": "WALKING"
+                },
+                {
+                  "distance": {
+                    "text": "1 ft",
+                    "value": 0
+                  },
+                  "duration": {
+                    "text": "1 min",
+                    "value": 12
+                  },
+                  "end_location": {
+                    "lat": 42.350312,
+                    "lng": -71.077382
+                  },
+                  "html_instructions": "Take entrance <span class=\"location\">Copley - Dartmouth St (East)</span>",
+                  "polyline": {
+                    "points": "mpnaGrhypL"
+                  },
+                  "start_location": {
+                    "lat": 42.350312,
+                    "lng": -71.077382
+                  },
+                  "travel_mode": "WALKING"
+                },
+                {
+                  "distance": {
+                    "text": "1 ft",
+                    "value": 0
+                  },
+                  "duration": {
+                    "text": "1 min",
+                    "value": 29
+                  },
+                  "end_location": {
+                    "lat": 42.350312,
+                    "lng": -71.077382
+                  },
+                  "polyline": {
+                    "points": "mpnaGrhypL"
+                  },
+                  "start_location": {
+                    "lat": 42.350312,
+                    "lng": -71.077382
+                  },
+                  "travel_mode": "WALKING"
+                },
+                {
+                  "distance": {
+                    "text": "1 ft",
+                    "value": 0
+                  },
+                  "duration": {
+                    "text": "1 min",
+                    "value": 25
+                  },
+                  "end_location": {
+                    "lat": 42.350312,
+                    "lng": -71.077382
+                  },
+                  "polyline": {
+                    "points": "mpnaGrhypL"
+                  },
+                  "start_location": {
+                    "lat": 42.350312,
+                    "lng": -71.077382
+                  },
+                  "travel_mode": "WALKING"
+                },
+                {
+                  "distance": {
+                    "text": "66 ft",
+                    "value": 20
+                  },
+                  "duration": {
+                    "text": "1 min",
+                    "value": 16
+                  },
+                  "end_location": {
+                    "lat": 42.350126,
+                    "lng": -71.077376
+                  },
+                  "polyline": {
+                    "points": "mpnaGrhypLb@?"
+                  },
+                  "start_location": {
+                    "lat": 42.350312,
+                    "lng": -71.077382
+                  },
+                  "travel_mode": "WALKING"
+                }
+              ],
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "1.3 mi",
+                "value": 2137
+              },
+              "duration": {
+                "text": "10 mins",
+                "value": 600
+              },
+              "end_location": {
+                "lat": 42.33788,
+                "lng": -71.09523999999999
+              },
+              "html_instructions": "Light rail towards Heath Street",
+              "polyline": {
+                "points": "ionaGrhypLVIDVLr@^`CXbBX`AHPPHlBg@N@hHjAv@Z^XV\\xEzGX`@DFRXzMfQj@v@NPPT~C|DfAzAVd@d@`ANd@Pl@\\jAXbAr@xBPh@f@~AZbAGDRp@Vv@Ph@DNHVDPHNDJDH\\pAX~@FR@HBL@HBJZfAHZp@vBh@jBj@jBL\\DPd@xANh@IF"
+              },
+              "start_location": {
+                "lat": 42.350126,
+                "lng": -71.077376
+              },
+              "transit_details": {
+                "arrival_stop": {
+                  "location": {
+                    "lat": 42.33788,
+                    "lng": -71.09523999999999
+                  },
+                  "name": "Museum of Fine Arts"
+                },
+                "arrival_time": {
+                  "text": "3:48 PM",
+                  "time_zone": "America/New_York",
+                  "value": 1703969328
+                },
+                "departure_stop": {
+                  "location": {
+                    "lat": 42.350126,
+                    "lng": -71.077376
+                  },
+                  "name": "Copley"
+                },
+                "departure_time": {
+                  "text": "3:40 PM",
+                  "time_zone": "America/New_York",
+                  "value": 1703968853
+                },
+                "headsign": "Heath Street",
+                "line": {
+                  "agencies": [
+                    {
+                      "name": "MBTA",
+                      "phone": "1 (617) 222-3200",
+                      "url": "http://www.mbta.com/"
+                    }
+                  ],
+                  "color": "#00843d",
+                  "name": "Green Line E",
+                  "short_name": "E",
+                  "text_color": "#ffffff",
+                  "url": "https://www.mbta.com/schedules/Green-E",
+                  "vehicle": {
+                    "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/tram2.png",
+                    "local_icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/us-boston-mbta.png",
+                    "name": "Light rail",
+                    "type": "TRAM"
+                  }
+                },
+                "num_stops": 4
+              },
+              "travel_mode": "TRANSIT"
+            },
+            {
+              "distance": {
+                "text": "0.1 mi",
+                "value": 221
+              },
+              "duration": {
+                "text": "3 mins",
+                "value": 207
+              },
+              "end_location": {
+                "lat": 42.3388772,
+                "lng": -71.0922341
+              },
+              "html_instructions": "Walk to 360 Huntington Ave, Boston, MA 02115, USA",
+              "polyline": {
+                "points": "yclaGdt|pLI[NGk@eBKYa@sAEQe@}AGUJDCIOi@CGEAKa@"
+              },
+              "start_location": {
+                "lat": 42.3380479,
+                "lng": -71.09458719999999
+              },
+              "steps": [
+                {
+                  "distance": {
+                    "text": "39 ft",
+                    "value": 12
+                  },
+                  "duration": {
+                    "text": "1 min",
+                    "value": 10
+                  },
+                  "end_location": {
+                    "lat": 42.3381035,
+                    "lng": -71.0944494
+                  },
+                  "html_instructions": "Head <b>northeast</b>",
+                  "polyline": {
+                    "points": "yclaGdt|pLI["
+                  },
+                  "start_location": {
+                    "lat": 42.3380479,
+                    "lng": -71.09458719999999
+                  },
+                  "travel_mode": "WALKING"
+                },
+                {
+                  "distance": {
+                    "text": "0.1 mi",
+                    "value": 209
+                  },
+                  "duration": {
+                    "text": "3 mins",
+                    "value": 197
+                  },
+                  "end_location": {
+                    "lat": 42.3388772,
+                    "lng": -71.0922341
+                  },
+                  "html_instructions": "Take the crosswalk<div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                  "polyline": {
+                    "points": "cdlaGhs|pLNGk@eBKYa@sAEQe@}AGUJDCIOi@CGEAKa@"
+                  },
+                  "start_location": {
+                    "lat": 42.3381035,
+                    "lng": -71.0944494
+                  },
+                  "travel_mode": "WALKING"
+                }
+              ],
+              "travel_mode": "WALKING"
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": []
+        }
+      ],
+      "overview_polyline": {
+        "points": "{ioaGf`ypLFf@^rBrBnLz@]DIz@]@CXGbAa@bAa@ACVENGb@KACVKbAa@`Aa@vAi@n@U@Fb@?VIDVl@tDXbBX`AHPPHlBg@N@hHjAv@Z^XV\\rF|HX`@vOpSpDrEfAzAVd@d@`ANd@n@xBfCfIZbAGDj@hBf@bBNZb@zA`@rADVj@xBzAbFx@hCj@jBNh@IFa@aCI[NGk@eBm@mBk@oBGUJDSs@IIKa@"
+      },
+      "summary": "",
+      "warnings": [
+        "Walking directions are in beta. Use caution – This route may be missing sidewalks or pedestrian paths."
+      ],
+      "waypoint_order": []
+    }
+  ],
+  "status": "OK"
+}
