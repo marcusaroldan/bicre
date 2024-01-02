@@ -1,5 +1,6 @@
 from backend.constants import TRAVEL_MODE
 from backend.directions import generate_directions
+from backend.address import latlng_to_address
 
 # evaluateRoute:
 #   Recursively evaluate a generated route, examining each leg and its steps.
@@ -29,7 +30,10 @@ def evaluate_route(route:dict, overall_route:list) -> None:
         for step in leg.get('steps'):
             mode = str.lower(step.get('travel_mode'))
             match mode:
-                case TRAVEL_MODE.transit.name | TRAVEL_MODE.bicycling.name:
+                case TRAVEL_MODE.transit.name:
+                    parse_transit(step)
+                    overall_route.append(step)
+                case TRAVEL_MODE.bicycling.name:
                     overall_route.append(step)
                 case TRAVEL_MODE.walking.name:
                     evaluate_route(parse_walking(step), overall_route)
@@ -52,6 +56,14 @@ def parse_walking(step:dict) -> dict:
     origin = step.get('start_location')
     dest = step.get('end_location')
     return generate_directions(origin, dest, TRAVEL_MODE.bicycling)[0]
+
+def parse_transit(step:dict):
+    origin_stop = step['start_location']
+    dest_stop = step['end_location']
+    origin_name = latlng_to_address(origin_stop)
+    dest_name = latlng_to_address(dest_stop)
+    print("Origin: {}".format(origin_name))
+    print("Dest: {}".format(dest_name))
 
 # DEPRECATED:
 # parseIntegratedStep:
