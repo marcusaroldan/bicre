@@ -1,7 +1,7 @@
 import json
-from backend.directions import generateDirections
-from backend.address import address_to_Place_ID
-from backend.route_evaluation import evaluateRoute
+from backend.directions import generate_directions
+from backend.address import address_to_place_id
+from backend.route_evaluation import evaluate_route
 from backend.constants import TRAVEL_MODE
 
 
@@ -23,10 +23,10 @@ def display_integrated_steps(integrated_steps):
 def main():
     origin = str(input('Enter an origin: '))
     dest = str(input('Enter a destination: '))
-    origin_pid = address_to_Place_ID(origin)
-    dest_pid = address_to_Place_ID(dest)
-    directions = generateDirections(origin_pid, dest_pid, TRAVEL_MODE.transit)
-    evaluateRoute(directions[0], overall_route)
+    origin_pid = address_to_place_id(origin)
+    dest_pid = address_to_place_id(dest)
+    directions = generate_directions(origin_pid, dest_pid, TRAVEL_MODE.transit)
+    evaluate_route(directions[0], overall_route)
     
     display_integrated_steps(overall_route)
 

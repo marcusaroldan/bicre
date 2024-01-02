@@ -7,7 +7,7 @@ def test():
 #   Query DirectionsAPI to generate a route between the given origin and destination (both Place_IDs).
 #   Mode is one of: 'transit', 'bicycling'
 #   String (Place_ID, LatLng), String (Place_ID, LatLng) --> Dict (Route)
-def generateDirections(origin:str, dest:str, mode:TRAVEL_MODE) -> list:
+def generate_directions(origin:str, dest:str, mode:TRAVEL_MODE) -> list:
     '''
     Use DirectionsAPI to generate a set of routes from the given origin to destination using the specified travel mode.
     :param origin: origin location as a string place_id or latlng

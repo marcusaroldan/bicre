@@ -1,5 +1,5 @@
 from backend.constants import TRAVEL_MODE
-from backend.directions import generateDirections
+from backend.directions import generate_directions
 
 # evaluateRoute:
 #   Recursively evaluate a generated route, examining each leg and its steps.
@@ -7,7 +7,7 @@ from backend.directions import generateDirections
 #   If a step consists of walking, use the parseWalking function to generate a new cycling route,
 #       then recursively evaluate this route.
 #   If a step consists of driving, something went wrong here. :)
-def evaluateRoute(route:dict, overall_route:list) -> None:
+def evaluate_route(route:dict, overall_route:list) -> None:
     # Route has one or more legs
     #   Each leg has steps
     #       Each step has a transit mode:
@@ -32,14 +32,14 @@ def evaluateRoute(route:dict, overall_route:list) -> None:
                 case TRAVEL_MODE.transit.name | TRAVEL_MODE.bicycling.name:
                     overall_route.append(step)
                 case TRAVEL_MODE.walking.name:
-                    evaluateRoute(parseWalking(step), overall_route)
+                    evaluate_route(parse_walking(step), overall_route)
                 case _: raise(ValueError(mode))
 
 # parseWalking:
 #   Extract start and end locations from walking step.
 #   Use extracted locations as origin and destination for new route, respectively.
 #   Returns: generated route for extracted start and end locations via bicycling. 
-def parseWalking(step:dict) -> dict:
+def parse_walking(step:dict) -> dict:
 
     '''
     Extract start and end locations from walking step.
@@ -51,7 +51,7 @@ def parseWalking(step:dict) -> dict:
 
     origin = step.get('start_location')
     dest = step.get('end_location')
-    return generateDirections(origin, dest, TRAVEL_MODE.bicycling)[0]
+    return generate_directions(origin, dest, TRAVEL_MODE.bicycling)[0]
 
 # DEPRECATED:
 # parseIntegratedStep:

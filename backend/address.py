@@ -3,7 +3,7 @@ from backend.constants import GOOGLE_CLIENT
 # address_to_Place_ID:
 #   Given a human readable address, retrieve Place ID using Geocoding API
 #   String (Address) --> String (Place ID)
-def address_to_Place_ID(address:str) -> str:
+def address_to_place_id(address:str) -> str:
 
     '''
     Given a human readable address, retrieve Place ID using Geocoding API
