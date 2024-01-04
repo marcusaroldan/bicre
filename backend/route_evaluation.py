@@ -87,25 +87,3 @@ def retrieve_stop_ID(latlng:dict) -> str:
 
     # Retrieve ID from response
     return stops_response['data'][0]['id']
-
-
-
-# DEPRECATED:
-# parseIntegratedStep:
-#   Parse the provided step with TRAVEL_MODE BICYCLING or TRANSIT into an integrated_step
-#   Step --> integrated_step
-# def parseIntegratedStep(step=dict, travel_mode=TRAVEL_MODE):
-#     integrated_step = dict()
-#     integrated_step.update({'start_location': step.get('start_location')})
-#     integrated_step.update({'end_location': step.get('end_location')})
-#     integrated_step.update({'travel_mode': travel_mode.name})
-#     integrated_step.update({'duration': step.get('duration')})
-#     integrated_step.update({'distance': step.get('distance')})
-#     integrated_step['instructions'] = step['html_instructions']
-#     if travel_mode == TRAVEL_MODE.bicycling:
-#         maneuver = step.get('maneuver')
-#         if maneuver != None: integrated_step.update({'maneuver': maneuver})
-#     elif travel_mode == TRAVEL_MODE.transit:
-#         transit_details = step.get('transit_details')
-#         if transit_details != None: integrated_step.update({'transit_details': transit_details})
-#     return integrated_step
