@@ -1,6 +1,9 @@
 from backend.constants import TRAVEL_MODE
 from backend.directions import generate_directions
 from backend.address import latlng_to_address
+import requests
+from backend.constants import MBTA_AUTH
+import json
 
 # evaluateRoute:
 #   Recursively evaluate a generated route, examining each leg and its steps.
@@ -58,12 +61,34 @@ def parse_walking(step:dict) -> dict:
     return generate_directions(origin, dest, TRAVEL_MODE.bicycling)[0]
 
 def parse_transit(step:dict):
-    origin_stop = step['start_location']
-    dest_stop = step['end_location']
-    origin_name = latlng_to_address(origin_stop)
-    dest_name = latlng_to_address(dest_stop)
-    print("Origin: {}".format(origin_name))
-    print("Dest: {}".format(dest_name))
+
+    '''
+    :param step: transit step as a dict
+    '''
+
+    origin_stop_latlng = step['start_location']
+    dest_stop_latlng = step['end_location']
+    origin_stop_id = retrieve_stop_ID(origin_stop_latlng)
+    origin_stop_id = retrieve_stop_ID(dest_stop_latlng)
+
+def retrieve_stop_ID(latlng:dict) -> str:
+    
+    '''
+    Use the given lat and long values as a dict to determine the MBTA stop ID
+    :param latlng: lattitude and longitude of stop as a dict
+    :rtype: MBTA ID of the stop as a string
+    '''
+
+    # Request stop information filtered by lattitude and longitude
+    url = 'https://api-v3.mbta.com/stops?filter[radius]=0.005&filter[latitude]={}&filter[longitude]={}'
+    latitude = latlng['lat']
+    longitude = latlng['lng']
+    stops_response = requests.get(url=url.format(latitude, longitude), auth=MBTA_AUTH).json()
+
+    # Retrieve ID from response
+    return stops_response['data'][0]['id']
+
+
 
 # DEPRECATED:
 # parseIntegratedStep:
