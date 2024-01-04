@@ -1,6 +1,7 @@
 import os
 import googlemaps
 from enum import Enum
+from requests.auth import HTTPBasicAuth
 
 # API Keys from Environment Variables
 MBTA_KEY = os.environ.get('MBTA_KEY')
@@ -16,3 +17,6 @@ GOOGLE_CLIENT = googlemaps.Client(key=GOOGLE_KEY)
 northeast = '43.146489,-69.681923'
 southwest = '41.2131168,-72.258425'
 LOOKUP_BOUNDS = {'northeast': northeast, 'southwest': southwest}
+
+# MBTA API Auth
+MBTA_AUTH = HTTPBasicAuth('key', MBTA_KEY)
