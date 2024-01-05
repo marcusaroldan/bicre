@@ -1,8 +1,5 @@
 from backend.constants import GOOGLE_CLIENT, TRAVEL_MODE
 
-def test():
-    print("Hello world")
-
 # generateDirections:
 #   Query DirectionsAPI to generate a route between the given origin and destination (both Place_IDs).
 #   Mode is one of: 'transit', 'bicycling'
@@ -18,7 +15,8 @@ def generate_directions(origin:str, dest:str, mode:TRAVEL_MODE) -> list:
 
     directions_result = GOOGLE_CLIENT.directions(origin=origin, 
                                                  destination=dest,
-                                                 mode=mode.name)
+                                                 mode=mode.name,
+                                                 transit_routing_preference=['fewer_transfers'] if [mode == TRAVEL_MODE.transit] else [None])
     # directions_headers = {'origin': origin,
     #                       'destination': dest,
     #                       'mode': mode.name,
