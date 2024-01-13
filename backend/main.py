@@ -18,6 +18,9 @@ def display_integrated_steps(integrated_steps):
               step.get('start_location').get('lat'), step.get('start_location').get('lng'),
               step.get('end_location').get('lat'), step.get('end_location').get('lng')))
         print(step.get('html_instructions'))
+        if(step.get('transit_details')):
+            print(step['transit_details']['line']['name'])
+            print(step['transit_details']['line']['vehicle']['type'])
 
 
 def main():
