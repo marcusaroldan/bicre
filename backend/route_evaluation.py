@@ -125,7 +125,7 @@ def transit_step_allows_bike(step:dict) -> bool:
             bikes_normally_allowed = bikes_on_tram(step)
         case 'TROLLEYBUS': 
             bikes_normally_allowed = bikes_on_trolley(step)
-        case 'SUBWAY':
+        case 'SUBWAY' | 'HEAVY_RAIL':
             bikes_normally_allowed = bikes_on_subway(step)
         case 'FERRY':
             bikes_normally_allowed = bikes_on_ferry(step)
