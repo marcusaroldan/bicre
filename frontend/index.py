@@ -11,6 +11,6 @@ def retrieve_route():
     if request.method == 'POST':
         start = request.form['start_addr']
         end = request.form['end_addr']
-        return execute_bicre(start, end)
+        return render_template('homepage.html', directions=execute_bicre(start, end))
     elif request.method == 'GET':
-        return render_template('route_form.html')
+        return render_template('homepage.html')
