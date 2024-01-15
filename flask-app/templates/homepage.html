@@ -1,0 +1,45 @@
+<html>
+    <head>
+      {# <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+      <script type="text/javascript" src="{{url_for('static', filename='map_embedding.js')}}">
+      </script> #}
+      {{"decoupled-map"|googlemap_js(37.4419, -122.1419, markers=[(37.4419,
+    -122.1419)])}}
+    </head>
+    <body>
+        <div class="BICRE">      
+            <div class="route_definition">
+                <form id="input_form" method="POST">
+                    <input type="text" id="start_addr" name="start_addr" placeholder="Origin">
+                    <input type="text" id="end_addr" name="end_addr" placeholder="Destination">
+                    <input type="submit" id="submit_route" value="Find Route">
+                </form>
+            </div>
+            <div class="route_description">
+                <p>Directions: </p>
+                {% if directions %}
+                <div> 
+                        {% for step in directions %} 
+                                                    {% if step['travel_mode'] == 'BICYCLING'%} 
+                                                    <p>
+                                                        <b>Cycling: </b> {{step['html_instructions']|safe}} <br>
+                                                        <i>{{step['duration']['text']}}, {{step['distance']['text']}}</i>
+                                                    </p>
+                                                    {% elif step['travel_mode'] == 'TRANSIT' %}
+                                                    <p>
+                                                        <b>Transit: </b> {{step['html_instructions']|safe}} <br>
+                                                        <i>{{step['duration']['text']}}, {{step['distance']['text']}}</i> <br>
+                                                        Take the {{step['transit_details']['line']['name']}}. Leave from {{step['transit_details']['departure_stop']['name']}} and stay on until {{step['transit_details']['arrival_stop']['name']}}.
+                                                    </p>
+                                                    {% endif %} 
+                        {% endfor %} 
+                </div>
+                {% endif %}
+            </div>
+            <div></div>
+        </div>
+        <div id="mapEmbedding">
+            <div id="map">{{map}} {{"decoupled-map"|googlemap_html(37.4419, -122.1419)}}</div>
+        </div>
+    </body>
+</html>
