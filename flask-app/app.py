@@ -13,9 +13,11 @@ GoogleMaps(bicre)
 @bicre.route('/', methods=['POST', 'GET'])
 def retrieve_route():
     route_map = Map(
-        identifier='view-side',
+        identifier='route-map',
         lat=42.361145, 
-        lng=-71.057083)
+        lng=-71.057083,
+        bicycle_layer=True,
+        mapdisplay=True)
     if request.method == 'POST':
         start = request.form['start_addr']
         end = request.form['end_addr']

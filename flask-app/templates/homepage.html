@@ -39,7 +39,7 @@
             <div></div>
         </div>
         <div id="mapEmbedding">
-            <div id="map">{{map}} {{"decoupled-map"|googlemap_html(37.4419, -122.1419)}}</div>
+            {{map.html}} {{googlemap("simple-map", 37.4419, -122.1419)}}
         </div>
     </body>
 </html>
