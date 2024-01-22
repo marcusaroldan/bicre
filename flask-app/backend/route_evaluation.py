@@ -118,7 +118,7 @@ def transit_step_allows_bike(step:dict) -> bool:
     # Route based on transit type:
     vehicle_type = step['transit_details']['line']['vehicle']['type']
 
-    bikes_normally_allowed = None
+    bikes_normally_allowed = False
     # Bikes not allowed on Green Line (Tram)
     match vehicle_type:
         case 'TRAM':
@@ -133,11 +133,12 @@ def transit_step_allows_bike(step:dict) -> bool:
             bikes_normally_allowed = bikes_on_commuter_rail(step)
         case 'BUS':
             bikes_normally_allowed = bikes_on_bus(step)
-        case _: 
+        case _:
             raise(ValueError(vehicle_type))
 
     url = 'https://api-v3.mbta.com/alerts?filter[stop]={}&filter[activity]=BRINGING_BIKE'
     allows_bike_response_api_response = requests.get(url=url.format(id), auth=MBTA_AUTH).json()
+    no_alerts_from_mbta = True
     no_alerts_from_mbta = len(allows_bike_response_api_response['data']) == 0
 
     return bikes_normally_allowed & no_alerts_from_mbta
@@ -222,4 +223,4 @@ def is_between_hours(start:int, end:int) -> bool:
     start_time = datetime.datetime.now().replace(hour=start, minute=0, second=0, microsecond=0)
     end_time = datetime.datetime.now().replace(hour=end, minute=0, second=0, microsecond=0)
 
-    return now >= start_time & now <= end_time
+    return (now >= start_time) & (now <= end_time)
