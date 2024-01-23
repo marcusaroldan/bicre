@@ -1,4 +1,4 @@
-# B.I.C.R.E (Boston Integrated Cycling Route Engine)
+# Welcome to B.I.C.R.E (Boston Integrated Cycling Route Engine)!
 ## What is Bicre?
 Bicre is a simple application which generates an integrated (cycling and transit) route between two locations in Boston. Simply enter the desired origin and destination, and Bicre will create and display a route that uses both cycling and available transit to get between the origin and destination.
 ## How does it create these routes?
@@ -16,3 +16,7 @@ The current version is an MVP and as such many improvements can be made, such as
   * Addressing shortcomings of the MBTA API (e.g. no current way to query amount of bikes on a bus rack)
   * Adding ability for additional waypoints along the route
   * More to come! :D
+
+## What does the current version of BICRE look like?
+For the MVP, the focus was on the backend integration of Google and MBTA APIs. As such, less focus was on the frontend feel. In the future, there will be an interactive map displaying the route segments and further information about the integrated route!
+![](image-examples/bicre_v1_example.PNG)
